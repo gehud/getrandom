@@ -1,5 +1,3 @@
-extern crate std;
-
 use crate::Error;
 use std::io;
 
