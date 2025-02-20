@@ -10,6 +10,9 @@ repository = "https://github.com/rust-random/getrandom"
 categories = ["os", "no-std"]
 exclude = [".*"]
 
+[lib]
+crate-type = ["rlib", "dylib"]
+
 [dependencies]
 cfg-if = "1"
 
@@ -30,6 +33,7 @@ js-sys = { version = "0.3", optional = true }
 wasm-bindgen-test = "0.3.18"
 
 [features]
+default = ["std"]
 # Implement std-only traits for getrandom::Error
 std = []
 # Disable `/dev/urandom` fallback for Linux and Android targets.
